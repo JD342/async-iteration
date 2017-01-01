@@ -1,0 +1,27 @@
+{
+  "name": "async-iteration",
+  "version": "1.0.0",
+  "description": "Do asynchronous iteration on sets of deferred data.",
+  "main": "build/async-iteration.npm.js",
+  "scripts": {
+    "test": "node --harmony scripts/test.js",
+    "test-minified": "node --harmony scripts/test-minified.js",
+    "test-uncompressed": "node --harmony scripts/test-uncompressed.js",
+    "build": "node --harmony scripts/build.js"
+  },
+  "author": "Nicola Fiori (JD342)",
+  "license": "MIT",
+  "dependencies": {
+    "babel-polyfill": "^6.20.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.21.0",
+    "babel-preset-babili": "0.0.9",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-es2016": "^6.16.0",
+    "babel-preset-es2017": "^6.16.0",
+    "jasmine": "^2.5.2",
+    "mz": "^2.6.0",
+    "rmfr": "^1.0.1"
+  }
+}
