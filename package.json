@@ -1,8 +1,12 @@
 {
   "name": "async-iteration",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Do asynchronous iteration on sets of deferred data.",
   "main": "build/async-iteration.npm.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JD342/async-iteration.git"
+  },
   "scripts": {
     "test": "node --harmony scripts/test.js",
     "test-minified": "node --harmony scripts/test-minified.js",
