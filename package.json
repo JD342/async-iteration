@@ -6,8 +6,8 @@
   "repository": "https://github.com/JD342/async-iteration",
   "keywords": ["async", "iteration", "asynchronous"],
   "scripts": {
-    "test": "node --harmony scripts/test.js",
-    "build": "node --harmony scripts/build.js"
+    "test": "scripts/run-script.sh test.js",
+    "build": "scripts/run-script.sh build.js"
   },
   "author": "Nicola Fiori (JD342)",
   "license": "MIT",
@@ -15,11 +15,13 @@
     "babel-polyfill": "^6.20.0"
   },
   "devDependencies": {
+    "babel-cli": "^6.18.0",
     "babel-core": "^6.21.0",
     "babel-preset-babili": "0.0.9",
     "babel-preset-es2015": "^6.18.0",
     "babel-preset-es2016": "^6.16.0",
     "babel-preset-es2017": "^6.16.0",
+    "if-node-version": "^1.1.1",
     "jasmine": "^2.5.2",
     "mz": "^2.6.0",
     "rmfr": "^1.0.1"
