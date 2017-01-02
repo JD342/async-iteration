@@ -6,8 +6,8 @@
   "repository": "https://github.com/JD342/async-iteration",
   "keywords": ["async", "iteration", "asynchronous"],
   "scripts": {
-    "test": "scripts/run-script.sh test.js",
-    "build": "scripts/run-script.sh build.js"
+    "test": "bash scripts/run-script.sh test.js",
+    "build": "bash scripts/run-script.sh build.js"
   },
   "author": "Nicola Fiori (JD342)",
   "license": "MIT",
