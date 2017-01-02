@@ -12,9 +12,11 @@ const options = {
     const jasmine = new Jasmine();
     jasmine.loadConfig(options);
     jasmine.execute();
-    await new Promise((res) => { jasmine.onComplete(res); });
+    const passed = await new Promise((res) => { jasmine.onComplete(res); });
     console.log('\nTest completed\n');
+    if (!passed) process.exit(-1);
 })().catch((err) => {
     console.error('\nTest failed\n');
     console.error(err);
+    process.exit(-1);
 });
