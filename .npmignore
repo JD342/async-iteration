@@ -4,3 +4,4 @@ build
 !build/async-iteration.npm.js
 .gitignore
 .eslintrc.json
+.travis.yml
