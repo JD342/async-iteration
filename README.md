@@ -1,6 +1,7 @@
 # async-iteration
 
 [![License][license-image]][license-url]
+[![Build status][travis-image]][travis-url]
 
   Enables asynchronous iteration on sets of deferred data.
 
@@ -209,3 +210,5 @@ path/to/file3
 [mz]:            https://github.com/normalize/mz#mz---modernize-nodejs
 [license-image]: https://img.shields.io/badge/license-MIT-blue.svg
 [license-url]:   LICENSE
+[travis-image]:  https://travis-ci.org/JD342/async-iteration.svg?branch=master
+[travis-url]:    https://travis-ci.org/JD342/async-iteration
