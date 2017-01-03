@@ -4,7 +4,7 @@
   "description": "Do asynchronous iteration on sets of deferred data.",
   "main": "build/async-iteration.npm.js",
   "repository": "https://github.com/JD342/async-iteration",
-  "keywords": ["async", "iteration", "asynchronous"],
+  "keywords": ["async", "iteration", "asynchronous", "for", "loop"],
   "scripts": {
     "test": "bash scripts/run-script.sh test.js",
     "build": "bash scripts/run-script.sh build.js"
