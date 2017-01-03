@@ -10,7 +10,8 @@ const {
     rawBuild,
     minifiedBuild,
     npmBuild,
-    licenseFile
+    licenseFile,
+    packageFile
 } = require('./shared/constants');
 
 const buildUncompressed = async (code, license) => {
@@ -49,9 +50,12 @@ const buildNpmModule = (() => {
     process.chdir(join(__dirname, '..'));
     const codeRead = readFile(sourceFile, 'utf8');
     const licenseRead = readFile(licenseFile, 'utf8');
+    const packageRead = readFile(packageFile, 'utf8');
     await rmfr(buildDir);
     await mkdir(buildDir);
-    const license = `/*\n\n${await licenseRead}\n*/`;
+    const { version } = JSON.parse(await packageRead);
+    const header = `Asynchronous Iteration Utility Factory (v. ${version})\n`;
+    const license = `/*\n\n${header}\n${await licenseRead}\n*/`;
     const code = await codeRead;
     await Promise.all([
         buildUncompressed(code, license),

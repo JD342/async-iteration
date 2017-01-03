@@ -9,3 +9,4 @@ exports.npmBuild =      resolve(exports.buildDir, 'async-iteration.npm.js');
 exports.sourceFile =    resolve(exports.sourceDir, 'async-iteration.js');
 exports.testDir =       resolve(exports.sourceDir, 'test');
 exports.licenseFile =   resolve(exports.mainDir, 'LICENSE');
+exports.packageFile =   resolve(exports.mainDir, 'package.json');
