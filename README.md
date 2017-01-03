@@ -10,7 +10,7 @@
   * [Installation](#installation)
   * [Examples](#examples)
     * [Basic](#basic-example)
-    * [Advanced](#advanced-example-reading-files-using-mz-)
+    * [Advanced](#advanced-example-reading-files-using-mz)
   * [API](#api)
   * [License](#license)
 
