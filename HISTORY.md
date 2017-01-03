@@ -1,3 +1,7 @@
+1.0.5 / 2017-01-03
+==================
+ * Fix README.md formatting in NPM
+
 1.0.4 / 2017-01-03
 ==================
  * Add more keywords in package.json
