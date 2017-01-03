@@ -211,42 +211,42 @@ path/to/file3
 
 ## API
 
-* ### `AsyncIteration` factory
+* __`AsyncIteration` factory__
 
-  `var `__`iteration`__` = AsyncIteration(`__`asyncFn`__`);`
+  <code>var <b>iteration</b> = <u>AsyncIteration</u>(<b>asyncFn</b>);</code>
 
   Factory function that creates and returns a plain object used for asynchronous
   iteration.
 
-  * #### `asyncFn`
+  * __`asyncFn`__
 
-    `async (`__`include`__`) => { ... }`
+    <code>async (<b>include</b>) => { ... }</code>
 
     [ES8 async function][async-funcs] or function that returns an
     [ES6 promise][promises]. It will be invoked
     immediately with an __`include`__ parameter.
 
-    * #### `include`
+    * __`include`__
 
-      `include(val);`
+      <code><u>include</u>(val);</code>
 
       Function passed as parameter to __`asyncFn`__. It accepts one argument.
       It can be invoked before __`asyncFn`__ resolves to resolve the next
       deferred value. It will throw a `TypeError` if it is invoked after
       __`asyncFn`__ resolves.
 
-  * #### `iteration`
+  * __`iteration`__
 
-    `var `__`iter`__` = iteration.iterate();`<br>
-    `var `__`promise`__` = iteration.promise();`
+    <code>var <b>iter</b> = <u>iteration</u>.iterate();</code><br>
+    <code>var <b>promise</b> = <u>iteration</u>.promise();</code>
 
     Plain object used for iterating asynchronously through the values resolved
     by __`asyncFn`__.
 
-    * #### `iter`
+    * __`iter`__
 
-      `for (const iter = iteration.iterate(); await iter();)
-      { const { result } = iter; ... }`
+      <code>for (const <u>iter</u> = iteration.iterate(); await <u>iter</u>();)
+      { const { result } = <u>iter</u>; ... }</code>
 
       Function that on its N<sup>th</sup> invocation will promise the
       N<sup>th</sup> value inclusion by __`asyncFn`__. It always returns a
@@ -255,17 +255,12 @@ path/to/file3
       N<sup>th</sup> included value on resultion of its N<sup>th</sup> returned
       promise.
 
-    * #### `promise`
+    * __`promise`__
 
-      `const values = await promise;`
+      <code>const values = await <u>promise</u>;</code>
 
       Promise that resolves an array of all included values after
       __`asyncFn`__ resolves.
-
-
-
-
-
 
 ## License
 
