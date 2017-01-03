@@ -199,6 +199,63 @@ path/to/file3
 ... (content of file3)
 ```
 
+## API
+
+* ### `AsyncIteration` factory
+
+  `var `__`iteration`__` = AsyncIteration(`__`asyncFn`__`);`
+
+  Factory function that creates and returns a plain object used for asynchronous
+  iteration.
+
+  * #### `asyncFn`
+
+    `async (`__`include`__`) => { ... }`
+
+    [ES8 async function][async-funcs] or function that returns an
+    [ES6 promise][promises]. It will be invoked
+    immediately with an __`include`__ parameter.
+
+    * #### `include`
+
+      `include(val);`
+
+      Function passed as parameter to __`asyncFn`__. It accepts one argument.
+      It can be invoked before __`asyncFn`__ resolves to resolve the next
+      deferred value. It will throw a `TypeError` if it is invoked after
+      __`asyncFn`__ resolves.
+
+  * #### `iteration`
+
+    `var `__`iter`__` = iteration.iterate();`<br>
+    `var `__`promise`__` = iteration.promise();`
+
+    Plain object used for iterating asynchronously through the values resolved
+    by __`asyncFn`__.
+
+    * #### `iter`
+
+      `for (const iter = iteration.iterate(); await iter();)
+      { const { result } = iter; ... }`
+
+      Function that on its N<sup>th</sup> invocation will promise the
+      N<sup>th</sup> value inclusion by __`asyncFn`__. It always returns a
+      promise that always resolves a boolean telling if the iteration has
+      concluded or not. It has a `result` property that will contain the
+      N<sup>th</sup> included value on resultion of its N<sup>th</sup> returned
+      promise.
+
+    * #### `promise`
+
+      `const values = await promise;`
+
+      Promise that resolves an array of all included values after
+      __`asyncFn`__ resolves.
+
+
+
+
+
 
 ## License
 
@@ -212,3 +269,5 @@ path/to/file3
 [license-url]:   LICENSE
 [travis-image]:  https://travis-ci.org/JD342/async-iteration.svg?branch=master
 [travis-url]:    https://travis-ci.org/JD342/async-iteration
+[async-funcs]:   https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function
+[promises]:      https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Promise
