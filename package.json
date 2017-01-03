@@ -1,6 +1,6 @@
 {
   "name": "async-iteration",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Do asynchronous iteration on sets of deferred data.",
   "main": "build/async-iteration.npm.js",
   "repository": "https://github.com/JD342/async-iteration",

@@ -1,3 +1,9 @@
+1.0.4 / 2017-01-03
+==================
+ * Add more keywords in package.json
+ * Add HISTORY.md
+ * Add TOC and API info in README.md
+
 1.0.3 / 2017-01-02
 ==================
  * Add some keywords in package.json
