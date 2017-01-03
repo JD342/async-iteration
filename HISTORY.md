@@ -1,3 +1,8 @@
+1.0.6 / 2017-01-03
+==================
+ * Fix broken link TOC in README.md
+ * Throw `Error` instead of `TypeError` if `include` is called after conclusion
+
 1.0.5 / 2017-01-03
 ==================
  * Fix README.md formatting in NPM

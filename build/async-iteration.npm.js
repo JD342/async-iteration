@@ -1,6 +1,6 @@
 /*
 
-Asynchronous Iteration Utility Factory (v. 1.0.5)
+Asynchronous Iteration Utility Factory (v. 1.0.6)
 
 Copyright (c) 2016-2017 Nicola Fiori (JD342)
 
