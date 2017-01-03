@@ -149,7 +149,7 @@ const test = (AsyncIteration) => {
                 expect(include).not.toThrow();
                 setTimeout(() => {
                     expect(include).toThrowError(
-                        TypeError,
+                        Error,
                         'include function called after conclusion'
                     );
                     if (++i === 3) done();
@@ -179,7 +179,7 @@ const test = (AsyncIteration) => {
 
                         setTimeout(() => {
                             expect(include).toThrowError(
-                                TypeError,
+                                Error,
                                 'include function called after conclusion'
                             );
                             if (++i === 3) done();
@@ -194,7 +194,7 @@ const test = (AsyncIteration) => {
                 expect(include).not.toThrow();
                 setTimeout(() => {
                     expect(include).toThrowError(
-                        TypeError,
+                        Error,
                         'include function called after conclusion'
                     );
                     if (++i === 3) done();

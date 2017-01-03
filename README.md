@@ -232,7 +232,7 @@ path/to/file3
 
       Function passed as parameter to __`asyncFn`__. It accepts one argument.
       It can be invoked before __`asyncFn`__ resolves to resolve the next
-      deferred value. It will throw a `TypeError` if it is invoked after
+      deferred value. It will throw an error if it is invoked after
       __`asyncFn`__ resolves.
 
   * __`iteration`__

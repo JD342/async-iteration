@@ -7,7 +7,7 @@ const AsyncIteration = (fn) => {
     const values = [];
 
     const include = (val) => {
-        if (done) throw TypeError('include function called after conclusion');
+        if (done) throw Error('include function called after conclusion');
         values.push(val);
         resolveNext(true);
     };
