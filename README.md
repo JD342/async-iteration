@@ -5,6 +5,16 @@
 
   Enables asynchronous iteration on sets of deferred data.
 
+## Table of Contents
+
+  * [Installation](#installation)
+  * [Examples](#examples)
+    * [Basic](#basic-example)
+    * [Advanced](#advanced-example-reading-files-using-mz-)
+  * [API](#api)
+  * [License](#license)
+
+
 ## Installation
 
 ##### As a node package
