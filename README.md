@@ -46,7 +46,7 @@ const iteration = AsyncIteration(async (include) => {
     include(4);
     include(2);
     // Population finishes when this async function resolves
-    // (subsequent calls to `include` will throw a TypeError)
+    // (subsequent calls to `include` will throw an error)
 });
 
 // Iterate asynchronously
@@ -81,7 +81,7 @@ var AsyncIteration = require('async-iteration');
 
 var iteration = AsyncIteration(function (include) {
     // Population finishes when the returned promise resolves
-    // (subsequent calls to `include` will throw a TypeError)
+    // (subsequent calls to `include` will throw an error)
     return new Promise(function (resolve, reject) {
         include(3);
         setTimeout(resolve, 1000); // wait for 1 second
