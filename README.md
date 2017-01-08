@@ -253,14 +253,17 @@ path/to/file3
       promise that always resolves a boolean telling if the iteration has
       concluded or not. It has a `result` property that will contain the
       N<sup>th</sup> included value on resultion of its N<sup>th</sup> returned
-      promise.
+      promise. If __`asyncFn`__ rejects at some point, the returned promises
+      after after the included values will all reject with the same error of
+      __`asyncFn`__.
 
     * __`promise`__
 
       <code>const values = await <u>promise</u>;</code>
 
-      Promise that resolves an array of all included values after
-      __`asyncFn`__ resolves.
+      Promise that resolves an array of all included values after __`asyncFn`__
+      resolves. If __`asyncFn`__ rejects, the promise will reject the same error
+      of __`asyncFn`__.
 
 ## License
 
