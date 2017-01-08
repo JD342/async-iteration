@@ -1,3 +1,7 @@
+1.0.7 / 2017-01-03
+==================
+ * Some clarifications in README.md
+
 1.0.6 / 2017-01-03
 ==================
  * Fix broken link TOC in README.md
